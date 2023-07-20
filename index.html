@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEGREY - DEGREY VIET NAM</title>
+
+  <!-- css  -->
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/base.css" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+
+  <!-- font awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- bootstrap  -->
+  <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
+
+  <!--[if lt IE 9]>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"
+        integrity="sha512-qWVvreMuH9i0DrugcOtifxdtZVBBL0X75r9YweXsdCHtXUidlctw7NXg5KVP3ITPtqZ2S575A0wFkvgS2anqSA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+    <![endif]-->
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-container">
+      
+        <div class="header__logo header__item">
+          <!-- mobile, tablet  -->
+          <label for="nav-mobile__input" class="header-logo__bars">
+            <i class="fa-solid fa-bars header-logo__bars--icon"></i>
+          </label>
+          <!-- mobile, tablet  -->
+          <a class="header-logo__a" href="./index.html">
+            <img src="./assets/images/logo.webp" alt="" class="header-logo__a-img" />
+          </a>
+        </div>
+
+        <!-- nav PC  -->
+        <nav class="header__menu header__item">
+          <ul class="header-menu__ul">
+            <li class="header-menu-ul__li">
+              <a class="header-menu-ul__li--a" href="./index.html">Trang chủ</a>
+            </li>
+            <li class="header-menu-ul__li">
+              <a class="header-menu-ul__li--a" href="./store.html">Store</a>
+            </li>
+            <li class="header-menu-ul__li">
+              <a class="header-menu-ul__li--a" href="./aboutus.html">Giới thiệu</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__search header__item">
+          <div class="header-search__wrap">
+            <div class="header-search__icon">
+              <a href="#" class="header-search__icon-a">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </div>
+            <div class="header-search__input">
+              <input class="header-search__input--search" type="text" placeholder="Tìm kiếm sản phẩm" />
+            </div>
+          </div>
+        </div>
+
+        <!-- The Modal -->
+      <button id="cart">
+        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+        Giỏ Hàng
+      </button>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Giỏ Hàng</h5>
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <div class="cart-row">
+              <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+              <span class="cart-price cart-header cart-column">Giá</span>
+              <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+            </div>
+            <div class="cart-items"></div>
+            <div class="cart-total">
+              <strong class="cart-total-title">Tổng Cộng:</strong>
+              <span class="cart-total-price">0VNĐ</span>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close-footer">
+              Đóng
+            </button>
+            <button type="button" class="btn btn-primary order">
+              Thanh Toán
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- nav MOBILE, TABLET  -->
+    <input type="checkbox" hidden name="" class="nav-input" id="nav-mobile__input">
+
+
+    <label for="nav-mobile__input" class="overlay"></label>
+
+    <nav class="nav-mobile header__item">
+      <label for="nav-mobile__input" class="nav-mobile__close">
+        <i class="fa-regular fa-circle-xmark nav-mobile__close--icon"></i>
+      </label>
+      <ul class="nav-mobile__ul">
+        <li class="nav-mobile-ul__li">
+          <a class="nav-mobile-ul__li--a" href="./index.html">Trang chủ</a>
+        </li>
+        <hr>
+        <li class="nav-mobile-ul__li">
+          <a class="nav-mobile-ul__li--a" href="./store.html">Store</a>
+        </li>
+        <hr>
+        <li class="nav-mobile-ul__li">
+          <a class="nav-mobile-ul__li--a" href="./aboutus.html">Giới thiệu</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section-one">
+      <div class="container">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/images/carousel1.webp" class="d-block w-100 carousel-img" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <!-- <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p> -->
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/images/carousel.2.png" class="d-block w-100 carousel-img" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <!-- <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p> -->
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/images/carousel.3.png" class="d-block w-100 carousel-img" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <!-- <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p> -->
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-two">
+      <div class="container">
+        <div class="section-two__title">
+          <h3 class="section-two__title--content">
+            ĐẶC QUYỀN CHO BẠN HÔM NAY!
+          </h3>
+        </div>
+        <div class="section-two__list">
+          <div class="section-two-list-item">
+            <div class="section-two-list-item__inner">
+              <h3 class="section-two-list-item__inner--title">
+                Giao hàng cứ để Xoài lo
+              </h3>
+              <p class="section-two-list-item__inner--content">
+                Freeship cho hoá đơn mua hàng 1 triệu (không áp dụng với các
+                khuyến mãi khác)
+              </p>
+              <div class="section-two-button saochepma" onclick="checkCopy()">Sao chép mã</div>
+            </div>
+          </div>
+          <div class="section-two-list-item">
+            <div class="section-two-list-item__inner">
+              <h3 class="section-two-list-item__inner--title">
+                Degrey giao hoả tốc tại Sài Gòn
+              </h3>
+              <p class="section-two-list-item__inner--content">
+                Xoài bếu tặng ngay mã giảm giá phí ship. Áp dụng cho hoá đơn
+                500.000 VNĐ
+              </p>
+              <div class="section-two-button saochepma" onclick="checkCopy()">Sao chép mã</div>
+            </div>
+          </div>
+          <div class="section-two-list-item">
+            <div class="section-two-list-item__inner">
+              <h3 class="section-two-list-item__inner--title">
+                Tặng 125.000đ
+              </h3>
+              <p class="section-two-list-item__inner--content">
+                Áp dụng đặc biệt cho đơn hàng từ 2,5 triệu đồng.(Áp dụng cho chi nhánh tại Sài Gòn)
+              </p>
+              <div class="section-two-button saochepma" onclick="checkCopy()">Sao chép mã</div>
+            </div>
+          </div>
+          <div class="section-two-list-item">
+            <div class="section-two-list-item__inner">
+              <h3 class="section-two-list-item__inner--title">
+                Khuyến mãi đến 10%
+              </h3>
+              <p class="section-two-list-item__inner--content">
+                Mã giảm 10% cho hoá đơn mua hàng trên 5 triệu đồng (Áp dụng từ tháng 4 này)
+              </p>
+              <div class="section-two-button saochepma" onclick="checkCopy()">Sao chép mã</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-three">
+      <div class="container">
+        <div class="section-three__tiltle">
+          <h1 class="section-three__title--content">BALO | BACKPACKS</h1>
+        </div>
+
+        <div class="section-three__list">
+          <div class="section-three-list-item img-product">
+            
+              <div class="section-three-list-item__inner cursor">
+                <img src="./assets/images/home/Balo/balo1.jpeg" alt="" class="section-three-list-item__inner--img img-prd" />
+                <div class="section-three-content">
+                  <div class="section-three-content__desc">
+                    <p class="content-product-h3">Balo Degrey Drawstring Backpack - DSBP</p>
+                  </div>
+                  <div class="section-three-content__price section-content__price">
+                    <span style="color: black;" class="section-three-content__price--new-sale price">
+                      190,000₫
+                    </span>
+
+                    <del class="section-three-content__price--old">
+                
+                    </del>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                    
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+
+          <div class="section-three-list-item img-product">
+            
+              <div class="section-three-list-item__inner cursor">
+                <img src="./assets/images/home/Balo/balo2.jpeg" alt="" class="section-three-list-item__inner--img img-prd" />
+                <div class="section-three-content">
+                  <div class="section-three-content__desc">
+                    <p class="content-product-h3">Balo Degrey Leather Flap Backpack - DLFB</p>
+                  </div>
+                  <div class="section-three-content__price section-content__price">
+                    <span style="color: black;" class="section-three-content__price--new-sale price">
+                      580,000₫
+                    </span>
+                    <del class="section-three-content__price--old">
+                      
+                    </del>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+
+          <div class="section-three-list-item img-product">
+            
+              <div class="section-three-list-item__inner cursor">
+                <img src="./assets/images/home/Balo/balo3.jpeg" alt="" class="section-three-list-item__inner--img img-prd" />
+                <div class="section-three-content">
+                  <div class="section-three-content__desc">
+                    <p class="content-product-h3">Balo Hạt Nhân Degrey - BHND</p>
+                  </div>
+                  <div class="section-three-content__price section-content__price">
+                    <span class="section-three-content__price--new price">
+                      420,000₫
+                    </span>
+                    <del class="section-three-content__price--old"> </del>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+
+          <div class="section-three-list-item img-product">
+            
+              <div class="section-three-list-item__inner cursor">
+                <img src="./assets/images/home/Balo/balo4.1.png" alt="" class="section-three-list-item__inner--img img-prd" />
+                <div class="section-three-content">
+                  <div class="section-three-content__desc">
+                    <p class="content-product-h3">Degrey Leather Basic Balo - LBB</p>
+                  </div>
+                  <div class="section-three-content__price section-content__price">
+                    <span class="section-three-content__price--new price">
+                      430,000₫
+                    </span>
+                    <del class="section-three-content__price--old"> </del>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+
+          <div class="section-three-list-item img-product">
+            
+              <div class="section-three-list-item__inner cursor">
+                <img src="./assets/images/home/Balo/balo5.2.png" alt="" class="section-three-list-item__inner--img img-prd" />
+                <div class="section-three-content">
+                  <div class="section-three-content__desc">
+                    <p class="content-product-h3">Basic Backpack Degrey - BBD</p>
+                  </div>
+                  <div class="section-three-content__price section-content__price">
+                    <span class="section-three-content__price--new price">
+                      420,000₫
+                    </span>
+                    <del class="section-three-content__price--old"> </del>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+
+          <div class="section-three-list-item img-product">
+            
+              <div class="section-three-list-item__inner cursor">
+                <img src="./assets/images/home/Balo/balo6.jpg" alt="" class="section-three-list-item__inner--img img-prd" />
+                <div class="section-three-content">
+                  <div class="section-three-content__desc">
+                    <p class="content-product-h3">Basic Backpack Degrey Trắng - BBD Trắng</p>
+                  </div>
+                  <div class="section-three-content__price section-content__price">
+                    <span class="section-three-content__price--new price">
+                      420,000₫
+                    </span>
+                    <del class="section-three-content__price--old"> </del>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+           
+          </div>
+
+          <div class="section-three-list-item img-product">
+            
+              <div class="section-three-list-item__inner cursor">
+                <img src="./assets/images/home/Balo/balo7.jpg" alt="" class="section-three-list-item__inner--img img-prd" />
+                <div class="section-three-content">
+                  <div class="section-three-content__desc">
+                    <p class="content-product-h3">Basic Backpack Degrey Xám - BBD Xám</p>
+                  </div>
+                  <div class="section-three-content__price section-content__price">
+                    <span class="section-three-content__price--new price">
+                      420,000₫
+                    </span>
+                    <del class="section-three-content__price--old"> </del>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+
+          <div class="section-three-list-item img-product">
+            
+              <div class="section-three-list-item__inner cursor">
+                <img src="./assets/images/home/Balo/balo8.1.png" alt="" class="section-three-list-item__inner--img img-prd" />
+                <div class="section-three-content">
+                  <div class="section-three-content__desc">
+                    <p class="content-product-h3">Balo Degrey Quằng Quện - BQQs</p>
+                  </div>
+                  <div class="section-three-content__price section-content__price">
+                    <span class="section-three-content__price--new price">
+                      420,000₫
+                    </span>
+                    <del class="section-three-content__price--old"> </del>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+
+          <div class="section-three-list-item img-product">
+            
+              <div class="section-three-list-item__inner cursor">
+                <img src="./assets/images/home/Balo/balo9.jpeg" alt="" class="section-three-list-item__inner--img img-prd" />
+                <div class="section-three-content">
+                  <div class="section-three-content__desc">
+                    <p class="content-product-h3">Degrey Letter Backpack - DLBP</p>
+                  </div>
+                  <div class="section-three-content__price section-content__price">
+                    <span class="section-three-content__price--new price">
+                      420,000₫
+                    </span>
+                    <del class="section-three-content__price--old"> </del>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+
+          <div class="section-three-list-item last-three-item img-product">
+           
+              <div class="section-three-list-item__inner cursor">
+                <img src="./assets/images/home/Balo/balo10.jpg" alt="" class="section-three-list-item__inner--img img-prd" />
+                <div class="section-three-content">
+                  <div class="section-three-content__desc">
+                    <p class="content-product-h3">Degrey Army Backpack - DAB</p>
+                  </div>
+                  <div class="section-three-content__price section-content__price">
+                    <span class="section-three-content__price--new price">
+                      430,000₫
+                    </span>
+                    <del class="section-three-content__price--old"> </del>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <section class="section-four">
+      <div class="container">
+        <div class="section-four__tiltle">
+          <h1 class="section-four__title--content">Túi | Bag</h1>
+        </div>
+        <div class="section-four__list">
+          <div class="section-four-list-item img-product">
+            
+              <div class="section-four-list-item__inner cursor">
+                <img src="./assets/images/home/Tui/Tui1.webp" alt="false"
+                  class="section-four-list-item__inner--image img-prd" />
+                <div class="section-four-content">
+                  <div class="section-four-content__desc">
+                    <p class="content-product-h3">Túi Da Degrey Leather Long Tote - DLLT</p>
+                  </div>
+                  <div class="section-four-content__price section-content__price">
+                    <span class="section-four-content__price--new-sale price">
+                      330,000₫
+                    </span>
+
+                    <del class="section-four-content__price--old">
+                      450,000₫
+                    </del>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+           
+          </div>
+
+          <div class="section-four-list-item img-product">
+            
+              <div class="section-four-list-item__inner cursor">
+                <img src="./assets/images/home/Tui/Tui2.webp" alt="false"
+                  class="section-four-list-item__inner--image img-prd" />
+                <div class="section-four-content">
+                  <div class="section-four-content__desc">
+                    <p class="content-product-h3">Túi Da Degrey Leather Basic Bag - DLBB</p>
+                  </div>
+                  <div class="section-four-content__price section-content__price">
+                    <span class="section-four-content__price--new-sale price">
+                      420,000₫
+                    </span>
+                    <del class="section-four-content__price--old">
+                      380,000₫
+                    </del>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+
+          <div class="section-four-list-item img-product">
+            
+              <div class="section-four-list-item__inner cursor">
+                <img src="./assets/images/home/TUI/TUI3.webp" alt="false"
+                  class="section-four-list-item__inner--image img-prd" />
+                <div class="section-four-content">
+                  <div class="section-four-content__desc">
+                    <p class="content-product-h3">Túi Degrey Box Bag Họ - BBH</p>
+                  </div>
+                  <div class="section-four-content__price section-content__price">
+                    <span class="section-four-content__price--new price">
+                      380,000₫
+                    </span>
+                    <del class="section-four-content__price--old">
+                      320,000đ
+                    </del>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+           
+          </div>
+
+          <div class="section-four-list-item img-product">
+            
+              <div class="section-four-list-item__inner cursor">
+                <img src="./assets/images/home/Tui/Tui4.webp" alt="false"
+                  class="section-four-list-item__inner--image img-prd" />
+                <div class="section-four-content">
+                  <div class="section-four-content__desc">
+                    <p class="content-product-h3">Balo Degrey Drawstring Backpack - DSBP</p>
+                  </div>
+                  <div class="section-four-content__price section-content__price">
+                    <span class="section-four-content__price--new price">
+                      190,000₫
+                    </span>
+                    <del class="section-four-content__price--old">
+                      350,000đ
+                    </del>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+           
+          </div>
+
+          <div class="section-four-list-item last-four-item img-product">
+            
+              <div class="section-four-list-item__inner cursor">
+                <img src="./assets/images/home/Tui/Tui5.webp" alt="false"
+                  class="section-four-list-item__inner--image img-prd" />
+                <div class="section-four-content">
+                  <div class="section-four-content__desc">
+                    <p class="content-product-h3">Degrey Leather ToteBook - DLT</p>
+                  </div>
+                  <div class="section-four-content__price section-content__price">
+                    <span class="section-four-content__price--new price">
+                      380,000đ
+                    </span>
+                    <del class="section-four-content__price--old">
+                      450,000đ
+                    </del>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="section-five">
+      <div class="container">
+        <div class="section-five__title">
+          <h1 class="section-five__title--content">ÁO THUN | TSHIRT</h1>
+        </div>
+        <div class="section-five__list">
+          <div class="section-five-list-item img-product">
+            
+              <div class="section-five-list-item__inner cursor">
+                <img src="./assets/images/home/ao/ao1.webp" alt="" class="section-five-list-item__inner--img img-prd" />
+                <div class="section-five-content">
+                  <div class="section-five-content__desc content-product-h3">
+                    Áo Thun Basic Degrey - ATBD rêu
+                  </div>
+                  <div class="section-five-content__price section-content__price">
+                    <span class="section-five-content__price--new price">190,000₫</span>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                  
+                </div>
+              </div>
+            
+          </div>
+          <div class="section-five-list-item img-product">
+            
+              <div class="section-five-list-item__inner cursor">
+                <img src="./assets/images/home/ao/anh2.webp" alt="" class="section-five-list-item__inner--img img-prd" />
+                <div class="section-five-content">
+                  <div class="section-five-content__desc content-product-h3">
+                    Áo Thun Basic Degrey Kem - ATBD
+                  </div>
+                  <div class="section-five-content__price section-content__price">
+                    <span class="section-five-content__price--new price">190,000₫</span>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                  
+                </div>
+              </div>
+            
+          </div>
+          <div class="section-five-list-item img-product">
+            
+              <div class="section-five-list-item__inner cursor">
+                <img src="./assets/images/home/ao/anh3.webp" alt="" class="section-five-list-item__inner--img img-prd" />
+                <div class="section-five-content">
+                  <div class="section-five-content__desc content-product-h3">
+                    Áo Thun Gân Degrey - ATGD
+                  </div>
+                  <div class="section-five-content__price section-content__price">
+                    <span class="section-five-content__price--new price">290,000₫</span>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                  
+                </div>
+              </div>
+            
+          </div>
+          <div class="section-five-list-item last-five-item img-product">
+            
+              <div class="section-five-list-item__inner cursor">
+                <img src="./assets/images/home/ao/anh5.webp" alt="" class="section-five-list-item__inner--img img-prd" />
+                <div class="section-five-content">
+                  <div class="section-five-content__desc content-product-h3">
+                    Áo Thun Basic Degrey Xám - ATBD
+                  </div>
+                  <div class="section-five-content__price section-content__price">
+                    <span class="section-five-content__price--new price">190,000₫</span>
+                    <button type="button" class="btn btn-cart btn_add">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+
+       
+      </div>
+    </section>
+
+    <section class="section-six">
+      <div class="container">
+        <div class="section-three__tiltle">
+          <h2 class="section-three__title--content">Set đồ gợi ý</h2>
+        </div>
+        <div class="section-six-list">
+          <div class="section-six-list-item">
+            <div class="section-six-list-item__inner">
+              <img src="./assets/images/home/SetGoiY/1.jpg" alt="" class="section-six-list-item__inner--img img-product" />
+            </div>
+          </div>
+
+          <div class="section-six-list-item">
+            <div class="section-six-list-item__inner">
+              <img src="./assets/images/home/SetGoiY/2.jpg" alt="" class="section-six-list-item__inner--img img-product" />
+            </div>
+          </div>
+
+          <div class="section-six-list-item">
+            <div class="section-six-list-item__inner">
+              <img src="./assets/images/home/SetGoiY/3.jpg" alt="" class="section-six-list-item__inner--img img-product" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    
+    <!-- Button trigger modal -->
+    <button style="padding: 0;" type="button" class="btn btn-primary btn-tuvanngay" data-toggle="modal" data-target="#exampleModal">
+      <img class="img-tuvanngay" src="./assets/images/call.png" alt="">
+    </button>
+    
+
+    <div class="modal fade form-contact" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+                  
+            <img src="./assets/images/logo.webp" alt="Logo">
+            <h3>Gửi yêu cầu tư vấn miễn phí</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+    
+          </div>
+          
+          
+          <div class="modal-body">
+            <form action="" onsubmit="send()">
+              <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Họ và tên *">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại *">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email *">
+              </div>
+              <button class="btn btn-main">Gửi yêu cầu</button>
+            </form>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-one">
+      <h4 class="footer-head">Về DEGREY</h4>
+      <div class="footer-top">
+        <div class="footer-top-item">
+          Cái tên Degrey được tạo ra rất ngẫu hứng, xuất phát từ “Chuỗi ngày u
+          buồn về sự nghiệp, tương lai trong quá khứ của chính mình” – theo
+          lời chia sẻ của Degrey’s founder.
+        </div>
+        <div class="footer-top-item">
+          <ul class="footer-top-item__ul">
+            <li class="footer-top-item__ul--li">
+              <b>Địa chỉ </b>
+              <br />
+              <b>-Sài Gòn:</b>
+              <br />
+
+              43 Huỳnh Văn Bánh P.17 Q.Phú Nhuận 1041 Luỹ Bán Bích P.Tân Thành
+              Q.Tân Phú
+              <br />
+              26 Lý Tự Trọng Q.1 - The New Playground
+              <br />
+              <b> -Đà Lạt:</b>
+              <br />
+              11 Khu Hoà Bình P.1 
+            </li>
+            <li class="footer-top-item__ul--li">
+              <b>Điện thoại:</b>
+              0336311117
+            </li>
+            <li class="footer-top-item__ul--li">
+              <b> Email:</b>
+              degrey.vn@gmail.com
+            </li>
+          </ul>
+        </div>
+        <div class="footer-top-item">
+          <div class="footer-top-item__title">Hỗ trợ khách hàng</div>
+          <ul class="footer-top-item__ul">
+            <li class="footer-top-item__ul--li">Hệ thống cửa hàng</li>
+            <li class="footer-top-item__ul--li">Hướng dẫn đặt hàng</li>
+            <li class="footer-top-item__ul--li">Chính sách và quy định</li>
+            <li class="footer-top-item__ul--li">Chính sách bảo mật</li>
+            <li class="footer-top-item__ul--li">Thông tin sở hữu</li>
+          </ul>
+        </div>
+        <div class="footer-top-item">
+          <div class="footer-top-item__title">Chăm sóc khách hàng</div>
+          <div class="footer-top-item__phone">
+            <i class="fa-solid fa-phone-volume footer-top-item__phone--icon"></i>
+            <span class="footer-top-item__phone--numberphone">0336311117</span>
+          </div>
+          <div class="footer-top-item__desc">
+            <h3 class="footer-top-item__desc--title footer-top-item__title">
+              Follow Us
+            </h3>
+            <div class="desc-icon">
+              <i class="fa-brands fa-facebook desc-icon__item"></i>
+              <i class="fa-brands fa-twitter desc-icon__item"></i>
+              <i class="fa-brands fa-instagram desc-icon__item"></i>
+              <i class="fa-brands fa-google-plus-g desc-icon__item"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        Copyright © 2023 DEGREY VIETNAM. Powered by Haravan
+      </div>
+    </div>
+    <div class="container footer-two">
+      <div class="footer-item">
+        <div class="footer-item__title"> Bán hàng 9:00 - 22:00</div>
+        <div class="footer-item__phone">
+          <i class="fa-solid fa-phone-volume footer-item__phone--icon"></i>
+          <span class="footer-item__phone--number"><b>0336311117</b></span>
+        </div>
+      </div>
+      <div class="footer-item">
+        <div class="footer-item__title">Khiếu nại 9:00 - 21:30</div>
+        <div class="footer-item__phone">
+          <i class="fa-solid fa-phone-volume footer-item__phone--icon"></i>
+          <span class="footer-item__phone--number"><b> 0775913335</b></span>
+        </div>
+      </div>
+      <div class="footer-item">
+          <a href="/store.html" class="footer-item__link">Xem thêm thông tin</a>
+        <span class="footer-item__icon"><i class="fa-solid fa-caret-down"></i></span>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="./assets/bootstrap/jquery.slim.min.js"></script>
+  <script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./main.js"></script>
+  <script src="./form.js"></script>
+
+</body>
+
+</html>

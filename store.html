@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HỆ THỐNG CỬA HÀNG DEGREY</title>
+
+  <!-- css  -->
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/base.css" />
+  <link rel="stylesheet" href="./assets/css/store.css" />
+
+  <!-- font awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- bootstrap  -->
+  <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
+
+  <!--[if lt IE 9]>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"
+        integrity="sha512-qWVvreMuH9i0DrugcOtifxdtZVBBL0X75r9YweXsdCHtXUidlctw7NXg5KVP3ITPtqZ2S575A0wFkvgS2anqSA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+    <![endif]-->
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-container">
+      
+        <div class="header__logo header__item">
+          <!-- mobile, tablet  -->
+          <label for="nav-mobile__input" class="header-logo__bars">
+            <i class="fa-solid fa-bars header-logo__bars--icon"></i>
+          </label>
+          <!-- mobile, tablet  -->
+          <a class="header-logo__a" href="./index.html">
+            <img src="./assets/images/logo.webp" alt="" class="header-logo__a-img" />
+          </a>
+        </div>
+
+        <!-- nav PC  -->
+        <nav class="header__menu header__item">
+          <ul class="header-menu__ul">
+            <li class="header-menu-ul__li">
+              <a class="header-menu-ul__li--a" href="./index.html">Trang chủ</a>
+            </li>
+            <li class="header-menu-ul__li">
+              <a class="header-menu-ul__li--a" href="./store.html">Store</a>
+            </li>
+            <li class="header-menu-ul__li">
+              <a class="header-menu-ul__li--a" href="./aboutus.html">Giới thiệu</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__search header__item">
+          <div class="header-search__wrap">
+            <div class="header-search__icon">
+              <a href="#" class="header-search__icon-a">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </div>
+            <div class="header-search__input">
+              <input class="header-search__input--search" type="text" placeholder="Tìm kiếm sản phẩm" />
+            </div>
+          </div>
+        </div>
+
+        <!-- The Modal -->
+      <button id="cart">
+        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+        Giỏ Hàng
+      </button>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Giỏ Hàng</h5>
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <div class="cart-row">
+              <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+              <span class="cart-price cart-header cart-column">Giá</span>
+              <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+            </div>
+            <div class="cart-items"></div>
+            <div class="cart-total">
+              <strong class="cart-total-title">Tổng Cộng:</strong>
+              <span class="cart-total-price">0VNĐ</span>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close-footer">
+              Đóng
+            </button>
+            <button type="button" class="btn btn-primary order">
+              Thanh Toán
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- nav MOBILE, TABLET  -->
+    <input type="checkbox" hidden name="" class="nav-input" id="nav-mobile__input">
+
+
+    <label for="nav-mobile__input" class="overlay"></label>
+
+    <nav class="nav-mobile header__item">
+      <label for="nav-mobile__input" class="nav-mobile__close">
+        <i class="fa-regular fa-circle-xmark nav-mobile__close--icon"></i>
+      </label>
+      <ul class="nav-mobile__ul">
+        <li class="nav-mobile-ul__li">
+          <a class="nav-mobile-ul__li--a" href="./index.html">Trang chủ</a>
+        </li>
+        <hr>
+        <li class="nav-mobile-ul__li">
+          <a class="nav-mobile-ul__li--a" href="./store.html">Store</a>
+        </li>
+        <hr>
+        <li class="nav-mobile-ul__li">
+          <a class="nav-mobile-ul__li--a" href="./aboutus.html">Giới thiệu</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class="main">
+        <div class="main-page">
+          <h1 class="main-page__title">HỆ THỐNG CỬA HÀNG DEGREY</h1>
+
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/kQ_pyG0jatk" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+
+          <div class="store">
+            <div class="store__title">
+              <i class="fa-solid fa-location-dot store__title--icon"></i>
+              <!-- <span class="store__title--content">
+              43 Huỳnh Văn Bánh P.17 Quận Phú Nhuận - SÀI GÒN
+            </span> -->
+              <a href="https://www.google.com/maps/place/Degrey.vn+-+S%C3%A0i+G%C3%B2n+-+43+Hu%E1%BB%B3nh+V%C4%83n+B%C3%A1nh+P.17+Q.Ph%C3%BA+Nhu%E1%BA%ADn/@10.7947553,106.6791475,17z/data=!3m1!4b1!4m6!3m5!1s0x317528d411c35277:0xcf96cde06627a938!8m2!3d10.7947553!4d106.6813416!16s%2Fg%2F11dzsy3d80"
+                target="_blank" class="cursor">
+                43 Huỳnh Văn Bánh P.17 Quận Phú Nhuận - SÀI GÒN</a>
+            </div>
+            <div class="store__img">
+              <img src="./assets/images/store/store1.jpg" class="store__img--1" alt="" />
+              <img src="./assets/images/store/store2.webp" alt="store__img--2" />
+            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31353.81241487224!2d106.60487021562503!3d10.7939529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fc2eb47c9af%3A0x979e3eb7da15d81e!2sDegrey!5e0!3m2!1svi!2s!4v1678805810473!5m2!1svi!2s"
+              class="posion" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <hr />
+
+          <div class="store">
+            <div class="store__title">
+              <i class="fa-solid fa-location-dot store__title--icon"></i>
+              <!-- <span class="store__title--content">1041 Lũy Bán Bích P.Tân Thành Quận Tân Phú - SÀI GÒN</span> -->
+              <a href="1041 Lũy Bán Bích, Tân Thành, Tân Phú, Thành phố Hồ Chí Minh, Việt Nam" class="cursor"
+                target="_blank">1041 Lũy Bán Bích P.Tân Thành Quận Tân Phú - SÀI GÒN</a>
+            </div>
+            <div class="store__img">
+              <img src="./assets/images/store/store3.jpg" class="store__img--1" alt="" />
+              <img src="./assets/images/store/store4.webp" alt="store__img--2" />
+            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31353.728697945695!2d106.648382615625!3d10.794755299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d411c35277%3A0xcf96cde06627a938!2zRGVncmV5LnZuIC0gU8OgaSBHw7JuIC0gNDMgSHXhu7NuaCBWxINuIELDoW5oIFAuMTcgUS5QaMO6IE5odeG6rW4!5e0!3m2!1svi!2s!4v1678805998963!5m2!1svi!2s"
+              class="posion" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <hr />
+
+          <div class="store">
+            <div class="store__title">
+              <i class="fa-solid fa-location-dot store__title--icon"></i>
+              <!-- <span class="store__title--content"> 26 Lý Tự Trọng (The New Playground) Quận 1 -  SÀI GÒN</span> -->
+              <a href="https://www.google.com/maps/place/The+New+Playground/@10.7779541,106.7006068,19.17z/data=!4m6!3m5!1s0x31752f480a0fb8c1:0xcadd1acca8a7c0af!8m2!3d10.7782!4d106.7010889!16s%2Fg%2F11g8w9vkkl"
+                class="cursor" target="_blank">26 Lý Tự Trọng, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Việt
+                Nam</a>
+            </div>
+            <div class="store__img">
+              <img src="./assets/images/store/store5.jpg" class="store__img--1" alt="" />
+            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31353.728697945695!2d106.648382615625!3d10.794755299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d411c35277%3A0xcf96cde06627a938!2zRGVncmV5LnZuIC0gU8OgaSBHw7JuIC0gNDMgSHXhu7NuaCBWxINuIELDoW5oIFAuMTcgUS5QaMO6IE5odeG6rW4!5e0!3m2!1svi!2s!4v1678805998963!5m2!1svi!2s"
+              class="posion" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <hr />
+
+          <div class="store">
+            <div class="store__title">
+              <i class="fa-solid fa-location-dot store__title--icon"></i>
+              <!-- <span class="store__title--content"> 11 Khu Hoà Bình Phường 1- ĐÀ LẠT</span> -->
+              <a href="https://www.google.com/maps/place/Degrey.vn+-+%C4%90%C3%A0+l%E1%BA%A1t+-+11+Khu+Ho%C3%A0+B%C3%ACnh/@11.9439863,108.433975,17z/data=!3m1!4b1!4m6!3m5!1s0x3171133076546f97:0x76f9fe25d3ba3f88!8m2!3d11.9439863!4d108.4361637!16s%2Fg%2F11hx76_jhf"
+                class="cursor" target="_blank">11 Khu Hoà Bình Phường 1- ĐÀ LẠT</a>
+            </div>
+            <div class="store__img">
+              <!-- <img src="/assets/images/store/store6.webp" class="store__img--1" alt="">    -->
+              <img src="./assets/images/store/store7.jpg" class="store__img--2" alt="" />
+            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1001347.5062672885!2d106.9985882959484!3d11.370187767971855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171133076546f97%3A0x76f9fe25d3ba3f88!2zRGVncmV5LnZuIC0gxJDDoCBs4bqhdCAtIDExIEtodSBIb8OgIELDrG5o!5e0!3m2!1svi!2s!4v1678806165225!5m2!1svi!2s"
+              class="posion" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="main-page-infor">
+            <h3 class="main-page-infor__phone">Hotline: 0336311117</h3>
+
+            <div class="main-page-infor__contact">
+              <i class="fa-brands fa-facebook main-page-infor__contact--icon"></i>
+              <a href="https://www.facebook.com/degrey.saigon"
+                class="main-page-infor__contact--content">https://www.facebook.com/degrey.saigon</a>
+            </div>
+            <hr />
+            <div class="main-page-infor__contact">
+              <i class="fa-brands fa-square-instagram main-page-infor__contact--icon"></i>
+              <a href="https://www.instagram.com/degrey.saigon/"
+                class="main-page-infor__contact--content">https://www.instagram.com/degrey.saigon/</a>
+            </div>
+            <hr />
+            <div class="main-page-infor__contact">
+              <i class="fa-brands fa-tiktok main-page-infor__contact--icon"></i>
+              <a href="https://www.tiktok.com/@degrey.vn"
+                class="main-page-infor__contact--content">https://www.tiktok.com/@degrey.vn</a>
+            </div>
+            <hr />
+            <div class="main-page-infor__contact">
+              <i class="fa-brands fa-youtube main-page-infor__contact--icon"></i>
+              <a href=" https://www.youtube.com/degreyvn" class="main-page-infor__contact--content">
+                https://www.youtube.com/degreyvn</a>
+            </div>
+            <hr />
+            <div class="main-page-infor__contact">
+              <i class="fa-brands fa-shopify main-page-infor__contact--icon"></i>
+              <a href="https://shopee.vn/degrey.vn"
+                class="main-page-infor__contact--content">https://shopee.vn/degrey.vn</a>
+            </div>
+            <hr />
+            <div class="main-page-infor__contact">
+              <i class="fa-solid fa-cart-shopping main-page-infor__contact--icon"></i>
+              <a href="https://www.lazada.vn/shop/degrey-vietnam/"
+                class="main-page-infor__contact--content">https://www.lazada.vn/shop/degrey-vietnam/</a>
+            </div>
+            <hr />
+          </div>
+        </div>
+
+        <aside class="aside">
+          <h3 class="aside__head">Danh mục page</h3>
+          <hr />
+          <a href="./index.html" class="aside__link">STORE | TRANG CHỦ</a>
+          <hr />
+          <a href="./store.html" class="aside__link">STORE | CỬA HÀNG</a>
+          <hr />
+          <a href="./aboutus.html" class="aside__link">DEGREY | ABOUT US</a>
+          <br />
+          <img src="./assets/images/store/store8.webp" class="aside__img" alt="" />
+        </aside>
+      </div>
+    
+      <!-- Button trigger modal -->
+    <button style="padding: 0;" type="button" class="btn btn-primary btn-tuvanngay" data-toggle="modal" data-target="#exampleModal">
+      <img class="img-tuvanngay" src="./assets/images/call.png" alt="">
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade form-contact" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+                  
+            <img src="./assets/images/logo.webp" alt="Logo">
+            <h3>Gửi yêu cầu tư vấn miễn phí</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+    
+          </div>
+          
+          
+          <div class="modal-body">
+            <form action="" onsubmit="send()">
+              <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Họ và tên *">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại *">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email *">
+              </div>
+              <button class="btn btn-main">Gửi yêu cầu</button>
+            </form>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-one">
+      <h4 class="footer-head">Về DEGREY</h4>
+      <div class="footer-top">
+        <div class="footer-top-item">
+          Cái tên Degrey được tạo ra rất ngẫu hứng, xuất phát từ “Chuỗi ngày u
+          buồn về sự nghiệp, tương lai trong quá khứ của chính mình” – theo
+          lời chia sẻ của Degrey’s founder.
+        </div>
+        <div class="footer-top-item">
+          <ul class="footer-top-item__ul">
+            <li class="footer-top-item__ul--li">
+              <b>Địa chỉ </b>
+              <br />
+              <b>-Sài Gòn:</b>
+              <br />
+
+              43 Huỳnh Văn Bánh P.17 Q.Phú Nhuận 1041 Luỹ Bán Bích P.Tân Thành
+              Q.Tân Phú
+              <br />
+              26 Lý Tự Trọng Q.1 - The New Playground
+              <br />
+              <b> -Đà Lạt:</b>
+              <br />
+              11 Khu Hoà Bình P.1 
+            </li>
+            <li class="footer-top-item__ul--li">
+              <b>Điện thoại:</b>
+              0336311117
+            </li>
+            <li class="footer-top-item__ul--li">
+              <b> Email:</b>
+              degrey.vn@gmail.com
+            </li>
+          </ul>
+        </div>
+        <div class="footer-top-item">
+          <div class="footer-top-item__title">Hỗ trợ khách hàng</div>
+          <ul class="footer-top-item__ul">
+            <li class="footer-top-item__ul--li">Hệ thống cửa hàng</li>
+            <li class="footer-top-item__ul--li">Hướng dẫn đặt hàng</li>
+            <li class="footer-top-item__ul--li">Chính sách và quy định</li>
+            <li class="footer-top-item__ul--li">Chính sách bảo mật</li>
+            <li class="footer-top-item__ul--li">Thông tin sở hữu</li>
+          </ul>
+        </div>
+        <div class="footer-top-item">
+          <div class="footer-top-item__title">Chăm sóc khách hàng</div>
+          <div class="footer-top-item__phone">
+            <i class="fa-solid fa-phone-volume footer-top-item__phone--icon"></i>
+            <span class="footer-top-item__phone--numberphone">0336311117</span>
+          </div>
+          <div class="footer-top-item__desc">
+            <h3 class="footer-top-item__desc--title footer-top-item__title">
+              Follow Us
+            </h3>
+            <div class="desc-icon">
+              <i class="fa-brands fa-facebook desc-icon__item"></i>
+              <i class="fa-brands fa-twitter desc-icon__item"></i>
+              <i class="fa-brands fa-instagram desc-icon__item"></i>
+              <i class="fa-brands fa-google-plus-g desc-icon__item"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        Copyright © 2023 DEGREY VIETNAM. Powered by Haravan
+      </div>
+    </div>
+    <div class="container footer-two">
+      <div class="footer-item">
+        <div class="footer-item__title">Bán hàng 9:00 - 22:00</div>
+        <div class="footer-item__phone">
+          <i class="fa-solid fa-phone-volume footer-item__phone--icon"></i>
+          <span class="footer-item__phone--number"><b>0336311117</b></span>
+        </div>
+      </div>
+      <div class="footer-item">
+        <div class="footer-item__title">Khiếu nại 9:00 - 21:30</div>
+        <div class="footer-item__phone">
+          <i class="fa-solid fa-phone-volume footer-item__phone--icon"></i>
+          <span class="footer-item__phone--number"><b> 0775913335</b></span>
+        </div>
+      </div>
+      <div class="footer-item">
+        <a href="./store.html" class="footer-item__link">Xem thêm thông tin</a>
+        <span class="footer-item__icon"><i class="fa-solid fa-caret-down"></i></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/bootstrap/jquery.slim.min.js"></script>
+  <script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./main.js"></script>
+  <script src="./form.js"></script>
+</body>
+
+</html>

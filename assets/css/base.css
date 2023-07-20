@@ -1,0 +1,610 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+
+/* start header   */
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+
+.header{
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 999999;
+}
+.header__item{
+    padding-top: 15px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+}
+.header .header-logo__a-img{
+    height: 54px;
+    width: auto;
+}
+.header .header-logo__a-img:hover{
+    cursor: pointer;
+}
+.header .header-menu__ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+.header .header-menu-ul__li{
+    display: inline-block;
+    padding: 15px;
+    height: 100%;
+}
+.header .header-menu-ul__li:hover{
+    cursor: pointer;
+    border-bottom: 2px solid #000000;
+}
+.header-menu-ul__li--a{
+    color: black;
+    text-decoration: none;
+}
+.header-menu-ul__li--a:hover{
+    color: black;
+    text-decoration: none;
+}
+.header-search__wrap{
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 15px;
+    width: 400px;
+    overflow: hidden;
+}
+.header-search__input--search{
+    border: none;
+    padding-left: 10px;
+    outline: none;border: none;
+}
+.header-search__icon-a{
+    color: black;
+}
+.header-search__icon-a:hover{
+    color: black;
+}
+
+.header-shop__wrap{
+    color: black;
+}
+.header-shop__wrap:hover{
+    color: black;
+    text-decoration: none;
+}
+  /* modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    margin: 0 auto;
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    outline: 0;
+  
+  }
+  
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .modal-footer {
+    display: flex;
+    border-top: 1px solid #aaaaaa;
+    padding: 1rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-top: 1px solid #aaaaaa;
+    padding: 1rem;
+  }
+  
+  .modal-footer>:not(:first-child) {
+    margin-left: .25rem;
+  }
+  
+  /* .btn {
+    cursor: pointer;
+    outline: none;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: all .2s ease-in-out;
+  } */
+  
+  .btn-secondary {
+    color: #292b2c;
+    background-color: #fff;
+    border-color: #ccc;
+  }
+  
+  .btn-primary {
+    color: #fff;
+    background-color: #0275d8;
+    border-color: #0275d8;
+  }
+  
+  .modal-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #aaaaaa;
+    padding: 1rem;
+  }
+  
+  h5.modal-title {
+    font-size: 1.5rem;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #cart {
+    font-size: 15px;
+    color: #fff;
+    background: #37352a;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    margin-left: 1rem;
+    padding: 12px;
+    cursor: pointer;
+    position: relative;
+    top: 10px;
+  }
+  
+  #cart:hover {
+    border-color: #fff;
+  }
+/* cart */
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+  }
+  
+  .cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .cart-row {
+    display: flex;
+  }
+  
+  .cart-item {
+    width: 45%;
+  }
+  
+  .cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .cart-quantity {
+    width: 35%;
+  }
+  
+  .cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+  }
+  
+  .cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+  }
+  
+  .btn-danger:hover {
+    background-color: #CC4C4C;
+  }
+  
+  .cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+  }
+  
+  .cart-row:last-child {
+    border-bottom: 1px solid black;
+  }
+  
+  .cart-row:last-child .cart-column {
+    border: none;
+  }
+  
+  .cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+  }
+  
+  .cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+  }
+/* end header  */
+
+/* start footer  */
+footer{
+    margin-top: 30px;
+    background: #000000;
+    color: #fff;
+}
+.footer-head{
+    color: #9b9b9b;
+    padding: 20px;
+}
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-top-item{
+    max-width: 23%;
+}
+.footer-top-item__title{
+    color: #9b9b9b;
+    font-size: 20px;
+}
+.footer-top-item__ul li{
+    list-style-type: disc;
+}
+.desc-icon__item{
+    padding: 5px;
+}
+.footer-bottom{
+    text-align: center;
+    padding: 30px 0;
+}
+.footer-two{
+    display: none;
+}
+
+.footer-item__link{
+    color: white;
+}
+.footer-item__link:hover{
+    color: white;
+    text-decoration: none;
+}
+
+/* end footer  */
+
+ /*start RESPONSIVE */
+
+/* nút ấn menu  */
+.header-logo__bars{
+    display: none;
+    padding-right: 30px;
+}
+.header-logo__bars:hover{
+    cursor: pointer;
+}
+/* lớp phủ  */
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: fadeIn linear 0.3s;
+}
+/* định dạng menu bars màn hình mobile , tablet  */
+ /* header  */
+.nav-mobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    max-width: 100%;
+    background: #fff;
+    transform: translateX(-100%);
+    transition: transform linear 0.3s;
+}
+
+.nav-mobile-ul__li--a{
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 10px;
+    margin-left: 20px;
+    font-size: 1.4rem;
+}
+.nav-mobile-ul__li--a:hover{
+    text-decoration: none;
+    color: black;
+}
+.nav-mobile__close{
+    font-size: 1.4rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+.nav-input:checked ~ .overlay{
+    display: block;
+}
+.nav-input:checked ~ .nav-mobile{
+    transform: translateX(0%);
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.header__shop{
+    display: flex;
+}
+.search-mobile{
+    display: none;
+    padding-right: 25px;
+    
+}
+
+/* Mobile width : <768px  */
+@media only screen and (max-width : 767px){
+    /* header  */
+    .header-logo__bars{
+        display: inline-block;
+        position: absolute;
+        left: 15px;
+        top: 30px;
+    }
+    .header__menu{
+        display: none;
+    }
+    .header__search{
+        display: none;
+    }
+    .search-mobile{
+        display: block;
+    }
+    .header-shop__title{
+        display: none;
+    }
+    .header-logo__a-img{
+        padding-left: 65px;
+    }
+    /* main  */
+    .section-five__infor {
+        
+        left: 0;
+        width: 100%;
+    }
+
+    /* footer  */
+    .footer-one{
+        display: none;
+    }
+    .footer-two{
+        display: block ;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+/* tablet: width >=768px and width <1200px  */
+@media only screen and (min-width : 768px) and (max-width : 1199px){
+    /* header  */
+    .header-logo__bars{
+        display: inline-block;
+    }
+    .header__menu{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+/* Tu van ngay */
+.form-contact .modal-content{
+  border-radius: 15px;
+}
+.form-contact .modal-header{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.form-contact .modal-header .close{
+  background: #000;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-contact .modal-header img{
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.form-contact .modal-header h3{
+  font-size: 24px;
+  font-weight: 700;
+  
+}
+.form-contact .btn-main{
+  background-image: -webkit-linear-gradient(-30deg, #f57f20, #d62b08 100%);
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+   padding: 10px;
+   text-align: center;
+   width: 100%;
+   border-radius: 30px;
+
+}
+.btn-tuvanngay{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 0;
+}
+.img-tuvanngay{
+  width: 50px;
+  height: 50px;
+}
+
+
+/* ---------------------------- about us------------------------------------*/
+.inner-head {
+  background: orange;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+}
+
+.inner-wrap {
+  box-shadow: rgb(0 0 0 / 4%) 0px 4px 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 70%;
+  padding: 30px 10px;
+}
+
+.inner-main {
+  padding: 20px;
+}
+
+.card {
+  border: 0;
+  padding-bottom: 20px;
+}
+
+.card-header {
+  padding: 0;
+  border: 0;
+  background: #fff;
+}
+.cart-title {
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: orange;
+  position: relative;
+}
+.cart-title.collapsed{
+  border-color: black;
+  color: black;
+}
+.cart-title i{
+  color: orange;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+.cart-title.collapsed i{
+  border-color: black;
+  
+}
+.cart-title.collapsed i::before{
+  content: "\f077";
+}
+
+
+/* Tu van ngay */
+.btn-tuvanngay{
+  animation: mymove 0.5s infinite;
+}
+@keyframes mymove{
+  50%{
+
+      transform: rotate(5deg);
+  }100%{
+ 
+      transform: rotate(-5deg);
+  }
+
+}
