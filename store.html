@@ -33,47 +33,46 @@
 <body>
   <header class="header">
     <div class="container header-container">
-      
-        <div class="header__logo header__item">
-          <!-- mobile, tablet  -->
-          <label for="nav-mobile__input" class="header-logo__bars">
-            <i class="fa-solid fa-bars header-logo__bars--icon"></i>
-          </label>
-          <!-- mobile, tablet  -->
-          <a class="header-logo__a" href="./index.html">
-            <img src="./assets/images/logo.webp" alt="" class="header-logo__a-img" />
-          </a>
-        </div>
+      <div class="header__logo header__item">
+        <!-- mobile, tablet  -->
+        <label for="nav-mobile__input" class="header-logo__bars">
+          <i class="fa-solid fa-bars header-logo__bars--icon"></i>
+        </label>
+        <!-- mobile, tablet  -->
+        <a class="header-logo__a" href="./index.html">
+          <img src="./assets/images/logo.webp" alt="" class="header-logo__a-img" />
+        </a>
+      </div>
 
-        <!-- nav PC  -->
-        <nav class="header__menu header__item">
-          <ul class="header-menu__ul">
-            <li class="header-menu-ul__li">
-              <a class="header-menu-ul__li--a" href="./index.html">Trang chủ</a>
-            </li>
-            <li class="header-menu-ul__li">
-              <a class="header-menu-ul__li--a" href="./store.html">Store</a>
-            </li>
-            <li class="header-menu-ul__li">
-              <a class="header-menu-ul__li--a" href="./aboutus.html">Giới thiệu</a>
-            </li>
-          </ul>
-        </nav>
+      <!-- nav PC  -->
+      <nav class="header__menu header__item">
+        <ul class="header-menu__ul">
+          <li class="header-menu-ul__li">
+            <a class="header-menu-ul__li--a" href="./index.html">Trang chủ</a>
+          </li>
+          <li class="header-menu-ul__li">
+            <a class="header-menu-ul__li--a" href="./store.html">Store</a>
+          </li>
+          <li class="header-menu-ul__li">
+            <a class="header-menu-ul__li--a" href="./aboutus.html">Giới thiệu</a>
+          </li>
+        </ul>
+      </nav>
 
-        <div class="header__search header__item">
-          <div class="header-search__wrap">
-            <div class="header-search__icon">
-              <a href="#" class="header-search__icon-a">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </a>
-            </div>
-            <div class="header-search__input">
-              <input class="header-search__input--search" type="text" placeholder="Tìm kiếm sản phẩm" />
-            </div>
+      <div class="header__search header__item">
+        <div class="header-search__wrap">
+          <div class="header-search__icon">
+            <a href="#" class="header-search__icon-a">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+          </div>
+          <div class="header-search__input">
+            <input class="header-search__input--search" type="text" placeholder="Tìm kiếm sản phẩm" />
           </div>
         </div>
+      </div>
 
-        <!-- The Modal -->
+      <!-- The Modal -->
       <button id="cart">
         <i class="fa fa-shopping-basket" aria-hidden="true"></i>
         Giỏ Hàng
@@ -107,13 +106,10 @@
           </div>
         </div>
       </div>
-
-
     </div>
 
     <!-- nav MOBILE, TABLET  -->
-    <input type="checkbox" hidden name="" class="nav-input" id="nav-mobile__input">
-
+    <input type="checkbox" hidden name="" class="nav-input" id="nav-mobile__input" />
 
     <label for="nav-mobile__input" class="overlay"></label>
 
@@ -125,11 +121,11 @@
         <li class="nav-mobile-ul__li">
           <a class="nav-mobile-ul__li--a" href="./index.html">Trang chủ</a>
         </li>
-        <hr>
+        <hr />
         <li class="nav-mobile-ul__li">
           <a class="nav-mobile-ul__li--a" href="./store.html">Store</a>
         </li>
-        <hr>
+        <hr />
         <li class="nav-mobile-ul__li">
           <a class="nav-mobile-ul__li--a" href="./aboutus.html">Giới thiệu</a>
         </li>
@@ -137,17 +133,21 @@
     </nav>
   </header>
   <main>
-    <div class="container">
-      <div class="main">
-        <div class="main-page">
-          <h1 class="main-page__title">HỆ THỐNG CỬA HÀNG DEGREY</h1>
-
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/kQ_pyG0jatk" title="YouTube video player"
+    <div class="main">
+      <div class="main-page">
+          <div class="main-page-container-list">
+            <h1 class="main-page__title">HỆ THỐNG CỬA HÀNG DEGREY</h1>
+          </div>
+          
+          <div class="main-page-container-list">
+            <iframe width="90%" height="auto" src="https://www.youtube.com/embed/kQ_pyG0jatk" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
+          </div>
+          
 
-          <div class="store">
+          <div class="store main-page-container-list">
             <div class="store__title">
               <i class="fa-solid fa-location-dot store__title--icon"></i>
               <!-- <span class="store__title--content">
@@ -167,9 +167,9 @@
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
-          <hr />
+       
 
-          <div class="store">
+          <div class="store main-page-container-list">
             <div class="store__title">
               <i class="fa-solid fa-location-dot store__title--icon"></i>
               <!-- <span class="store__title--content">1041 Lũy Bán Bích P.Tân Thành Quận Tân Phú - SÀI GÒN</span> -->
@@ -186,9 +186,9 @@
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
-          <hr />
+       
 
-          <div class="store">
+          <div class="store main-page-container-list">
             <div class="store__title">
               <i class="fa-solid fa-location-dot store__title--icon"></i>
               <!-- <span class="store__title--content"> 26 Lý Tự Trọng (The New Playground) Quận 1 -  SÀI GÒN</span> -->
@@ -205,9 +205,9 @@
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
-          <hr />
+   
 
-          <div class="store">
+          <div class="store main-page-container-list">
             <div class="store__title">
               <i class="fa-solid fa-location-dot store__title--icon"></i>
               <!-- <span class="store__title--content"> 11 Khu Hoà Bình Phường 1- ĐÀ LẠT</span> -->
@@ -224,7 +224,7 @@
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
-          <div class="main-page-infor">
+          <div class="main-page-infor main-page-container-list">
             <h3 class="main-page-infor__phone">Hotline: 0336311117</h3>
 
             <div class="main-page-infor__contact">
@@ -264,60 +264,58 @@
             </div>
             <hr />
           </div>
-        </div>
+   
 
-        <aside class="aside">
-          <h3 class="aside__head">Danh mục page</h3>
-          <hr />
-          <a href="./index.html" class="aside__link">STORE | TRANG CHỦ</a>
-          <hr />
-          <a href="./store.html" class="aside__link">STORE | CỬA HÀNG</a>
-          <hr />
-          <a href="./aboutus.html" class="aside__link">DEGREY | ABOUT US</a>
-          <br />
-          <img src="./assets/images/store/store8.webp" class="aside__img" alt="" />
-        </aside>
       </div>
-    
-      <!-- Button trigger modal -->
-    <button style="padding: 0;" type="button" class="btn btn-primary btn-tuvanngay" data-toggle="modal" data-target="#exampleModal">
-      <img class="img-tuvanngay" src="./assets/images/call.png" alt="">
+
+      <aside class="aside">
+        <h3 class="aside__head">Danh mục page</h3>
+        <hr />
+        <a href="./index.html" class="aside__link">STORE | TRANG CHỦ</a>
+        <hr />
+        <a href="./store.html" class="aside__link">STORE | CỬA HÀNG</a>
+        <hr />
+        <a href="./aboutus.html" class="aside__link">DEGREY | ABOUT US</a>
+        <br />
+        <img src="./assets/images/store/store8.webp" class="aside__img" alt="" />
+      </aside>
+    </div>
+
+    <!-- Button trigger modal -->
+    <button style="padding: 0" type="button" class="btn btn-primary btn-tuvanngay" data-toggle="modal"
+      data-target="#exampleModal">
+      <img class="img-tuvanngay" src="./assets/images/call.png" alt="" />
     </button>
-    
+
     <!-- Modal -->
-    <div class="modal fade form-contact" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade form-contact" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-                  
-            <img src="./assets/images/logo.webp" alt="Logo">
+            <img src="./assets/images/logo.webp" alt="Logo" />
             <h3>Gửi yêu cầu tư vấn miễn phí</h3>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <i class="fa-solid fa-xmark"></i>
             </button>
-    
           </div>
-          
-          
+
           <div class="modal-body">
             <form action="" onsubmit="send()">
               <div class="form-group">
-                <input type="text" class="form-control" id="name" name="name" placeholder="Họ và tên *">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Họ và tên *" />
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại *">
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại *" />
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" id="email" name="email" placeholder="Email *">
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email *" />
               </div>
               <button class="btn btn-main">Gửi yêu cầu</button>
             </form>
           </div>
-    
         </div>
       </div>
-    </div>
-
     </div>
   </main>
 
@@ -345,7 +343,7 @@
               <br />
               <b> -Đà Lạt:</b>
               <br />
-              11 Khu Hoà Bình P.1 
+              11 Khu Hoà Bình P.1
             </li>
             <li class="footer-top-item__ul--li">
               <b>Điện thoại:</b>

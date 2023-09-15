@@ -458,7 +458,9 @@ footer{
         display: flex;
         justify-content: space-between;
     }
-    
+    #cart{
+      padding: 6px;
+    }
 }
 /* tablet: width >=768px and width <1200px  */
 @media only screen and (min-width : 768px) and (max-width : 1199px){
